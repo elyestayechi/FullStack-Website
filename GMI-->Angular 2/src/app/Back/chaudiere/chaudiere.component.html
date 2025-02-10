@@ -1,0 +1,63 @@
+<div class="iq-card">
+  <div class="iq-card-header d-flex justify-content-between">
+    <div class="iq-header-title">
+      <h4>Chaudières</h4>
+    </div>
+  </div>
+  <div class="iq-card-body">
+    <form (ngSubmit)="addChaudiere()">
+      <div class="form-group">
+        <label for="modele">Modèle</label>
+        <input type="text" id="modele" [(ngModel)]="newChaudiere.modele" name="modele" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="numeroSerie">Numéro de Série</label>
+        <input type="text" id="numeroSerie" [(ngModel)]="newChaudiere.numeroSerie" name="numeroSerie" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="dateInstallation">Date d'Installation</label>
+        <input type="date" id="dateInstallation" [(ngModel)]="newChaudiere.dateInstallation" name="dateInstallation" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="dateDerniereMaintenance">Date de Dernière Maintenance</label>
+        <input type="date" id="dateDerniereMaintenance" [(ngModel)]="newChaudiere.dateDerniereMaintenance" name="dateDerniereMaintenance" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="newChaudiere.description" name="description" class="form-control" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">{{ isEditMode ? 'Update' : 'Add' }} Chaudière</button>
+      <button type="button" class="btn btn-secondary" (click)="clearForm()">Clear</button>
+    </form>
+    <!-- Table to display existing chaudières -->
+    <div class="table-responsive mt-4">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Modèle</th>
+            <th>Numéro de Série</th>
+            <th>Date d'Installation</th>
+            <th>Date de Dernière Maintenance</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let chaudiere of chaudieres">
+            <td>{{ chaudiere.id }}</td>
+            <td>{{ chaudiere.modele }}</td>
+            <td>{{ chaudiere.numeroSerie }}</td>
+            <td>{{ chaudiere.dateInstallation | date: 'shortDate' }}</td>
+            <td>{{ chaudiere.dateDerniereMaintenance | date: 'shortDate' }}</td>
+            <td>{{ chaudiere.description }}</td>
+            <td>
+              <button (click)="editChaudiere(chaudiere.id)" class="btn btn-primary">Modifier</button>
+              <button (click)="deleteChaudiere(chaudiere.id)" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

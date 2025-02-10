@@ -1,0 +1,67 @@
+<section class="trusted-company">
+    <div class="trusted-company__bg" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/shapes/trust-bg-1-1.png);"></div>
+    <div class="trusted-company__content">
+        <div class="block-title text-left">
+          <p>Home / Contact</p>
+          <h2>Contact Us</h2>
+        </div><!-- /.block-title -->
+    </div>
+  </section>
+
+<section class="contact-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="contact-one__content">
+                    <div class="block-title">
+                        <p class="small-title">Get in touch with us</p>
+                        <h2 class="title-block">Ask for your query</h2>
+                    </div>
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-telephone"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Call Anytime</h4>
+                            <a href="tel:+216 50 263 806">+216 50 263 806</a>
+                        </div>
+                    </div>
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-email1"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Write Email</h4>
+                            <a href="mailto:tayechielyes3@gmail.com">tayechielyes3@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-one__box">
+                        <i class="pylon-icon-pin1"></i>
+                        <div class="contact-one__box-content">
+                            <h4>Visit Office</h4>
+                            <a href="#">Sidi Salah, Tunis, Tunisia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <form (ngSubmit)="addFormulaireContact()" class="contact-one__form">
+                    <div class="row low-gutters">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" class="form-control contact-one__form-input" name="nom" [(ngModel)]="newFormulaireContact.nom" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" class="form-control contact-one__form-input" name="email" [(ngModel)]="newFormulaireContact.email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Write Message" class="contact-one__form-input" [(ngModel)]="newFormulaireContact.message"></textarea>
+                            </div>
+                            <button type="submit" class="thm-btn">Send A Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

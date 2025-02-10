@@ -1,0 +1,399 @@
+<section class="main-slider">
+  <div class="swiper-container thm-swiper__slider" data-swiper-options='{
+"slidesPerView": 1,
+"loop": true,
+"effect": "fade",
+"autoplay": {
+  "delay": 5000
+},
+"navigation": {
+  "nextEl": "#main-slider__swiper-button-next",
+  "prevEl": "#main-slider__swiper-button-prev"
+}
+}'>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="image-layer" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/main-slider/main-slider-1-1.jpg);" width="1894" height="862"></div>
+              <!-- /.image-layer -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xl-6 col-lg-6">
+                        <p class="white-text">Leader in Industrial Maintenance Solutions</p>
+                        <h2>Providing Reliable Services</h2>
+                          <a routerLink="/services" class=" thm-btn">Explore Services</a>
+                          <!-- /.thm-btn dynamic-radius -->
+                      </div><!-- /.col-lg-7 text-right -->
+                  </div><!-- /.row -->
+              </div><!-- /.container -->
+          </div><!-- /.swiper-slide -->
+          <div class="swiper-slide">
+              <div class="image-layer" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/main-slider/main-slider-1-2.jpg);" width="1894" height="862"></div>
+              <!-- /.image-layer -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xl-6 col-lg-6">
+                        <p class="white-text">Efficient Industrial Solutions</p>
+                        <h2>Maximizing Productivity</h2>
+                          <a routerLink="/chaudieres" class=" thm-btn">View Chaudieres</a>
+                          <!-- /.thm-btn dynamic-radius -->
+                      </div><!-- /.col-lg-7 text-right -->
+                  </div><!-- /.row -->
+              </div><!-- /.container -->
+          </div><!-- /.swiper-slide -->
+          <div class="swiper-slide">
+              <div class="image-layer" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/main-slider/main-slider-2-3.jpg);"></div>
+              <!-- /.image-layer -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xl-6 col-lg-6">
+                        <p class="white-text">Reliable Maintenance Partners</p>
+                        <h2>Ensuring Operational Efficiency</h2>
+                          <a href="apply-now.html" class=" thm-btn">Contact Us</a>
+                          <!-- /.thm-btn dynamic-radius -->
+                      </div><!-- /.col-lg-7 text-right -->
+                  </div><!-- /.row -->
+              </div><!-- /.container -->
+          </div><!-- /.swiper-slide -->
+      </div><!-- /.swiper-wrapper -->
+
+      <!-- If we need navigation buttons -->
+      <div class="main-slider__nav">
+          <div class="swiper-button-prev" id="main-slider__swiper-button-next"><i class="pylon-icon-left-arrow"></i></div>
+          <div class="swiper-button-next" id="main-slider__swiper-button-prev"><i class="pylon-icon-right-arrow"></i></div>
+      </div><!-- /.main-slider__nav -->
+
+  </div><!-- /.swiper-container thm-swiper__slider -->
+ 
+</section><!-- /.main-slider -->
+
+<section class="about-one">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+                <div class="about-one__content text-center">
+                    <div class="block-title">
+                        <p>Company Introduction</p>
+                        <h2>Your Trusted Industrial Maintenance Partner</h2>
+                    </div><!-- /.block-title -->
+                    <p>Generale Maintenance Industrielle is your reliable partner for industrial maintenance services. With years of experience and a team of skilled professionals, we are committed to ensuring the operational efficiency of your industrial facilities.</p>
+                </div><!-- /.about-one__content -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-four__box text-center"><!-- .feature-four__box -->
+                            <div class="feature-four__box-inner">
+                                <div class="feature-four__box-icon"><i class="flaticon flaticon-property-1"></i></div>
+                                <div class="feature-four__box-right">
+                                    <h3>
+                                        Industry Experts
+                                    </h3>
+                                    <p>Experienced professionals specializing in industrial maintenance</p>
+                                </div>
+                            </div>
+                        </div><!-- /.feature-four__box -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-four__box text-center"><!-- .feature-four__box -->
+                            <div class="feature-four__box-inner">
+                                <div class="feature-four__box-icon"><i class="flaticon flaticon-growth-1"></i></div>
+                                <div class="feature-four__box-right">
+                                    <h3>                                        
+                                        Trusted Services
+                                    </h3>
+                                    <p>Providing reliable and trusted maintenance solutions</p>
+                                </div>
+                            </div>
+                        </div><!-- /.feature-four__box -->
+                    </div>
+                </div>
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.about-one -->
+
+
+         
+
+<section class="service-one__home-two custom-padding">
+    <div class="container">
+        <div class="block-title text-center">
+            <p>What We’re Offering</p>
+            <h2>All GMI Services</h2>
+        </div><!-- /.block-title -->
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let service of services.slice(0, 3)">
+                <div class="service-second">
+                    <div class="service-second-info-icon">
+                        <div class="service-icon2">
+                            
+                        </div>
+                        <h3><a >{{ service.nomService }}</a></h3>
+                    </div>
+                    <div class="service-second__content">
+                        <p>{{ service.description }}</p>
+                        <a [routerLink]="'/services/' + service.id" class="pylon-icon-right-arrow service-two__card-link"></a><!-- /.service-two__card-link -->
+                    </div>
+                </div><!-- /.service-second -->
+            </div><!--/.col-lg-4-->
+        </div><!--/.row-->
+        <div class="text-center mt-4">
+            <a routerLink="/services" class="btn btn-primary">View All Services</a>
+        </div><!-- /.text-center -->
+    </div><!-- /.container -->
+</section><!-- /.service-one__home-two -->
+
+
+<section class="feature-one">
+   <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="block-title text-left">
+                  <p>Get to Know About</p>
+                  <h2>Reliable and Efficient Industrial Maintenance Solutions</h2>
+              </div><!-- /.block-title -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+              <p class="block-text">Our team of experts provides comprehensive maintenance services to ensure your industrial operations run smoothly and efficiently. From preventive maintenance to emergency repairs, we are committed to minimizing downtime and maximizing productivity.</p><!-- /.block-text -->
+          </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="feature-one__box">
+                  <i class="pylon-icon-verification"></i>
+                  <p>Comprehensive Maintenance Services</p>
+              </div><!-- /.feature-one__box -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+              <div class="feature-one__box">
+                  <i class="pylon-icon-verification"></i>
+                  <p>High Efficiency and Reliability</p>
+              </div><!-- /.feature-one__box -->
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+              <div class="feature-one__box">
+                  <i class="pylon-icon-verification"></i>
+                  <p>24/7 Support and Emergency Services</p>
+              </div><!-- /.feature-one__box -->
+          </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+  </div><!-- /.container -->
+</section><!-- /.feature-one -->
+
+<section class="trusted-company">
+  <div class="trusted-company__bg" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/shapes/trust-bg-1-1.png);"></div><!-- /.trusted-company__bg -->
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="trusted-company__content">
+                  <div class="block-title text-left">
+                    <p>Trusted Company</p>
+                    <h2>Reliable Industrial Maintenance Services You Can Trust</h2>
+                  </div><!-- /.block-title -->
+                  <div class="trusted-company__image">
+                       <p>Our team provides top-notch industrial maintenance services, ensuring minimal downtime and optimal efficiency for your operations. With years of experience and a commitment to quality, we are your trusted partner for all maintenance needs.</p>
+                  </div><!-- /.trusted-company__image -->
+                  <div class="row">
+                    <div class="col-sm-5 col-xs-12">
+                      <ul class="trusted-company__list">
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Preventive Maintenance</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Emergency Repairs</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Equipment Inspection</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">System Upgrades</span>
+                        </li><!-- /.trusted-company__list-item-->
+                      </ul><!-- /.trusted-company__list-->
+                    </div><!-- /.col-md-5-->
+                    <div class="col-sm-6 col-xs-12">
+                      <ul class="trusted-company__list trusted-company__list-2">
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">24/7 Support</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Consulting Services</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Customized Solutions</span>
+                        </li><!-- /.trusted-company__list-item-->
+                        <li class="trusted-company__list-item">
+                          <span>
+                            <i aria-hidden="true" class="far fa-check-circle"></i>
+                          </span>
+                          <span class="trusted-company__list-text">Energy Efficiency</span>
+                        </li><!-- /.trusted-company__list-item-->
+                      </ul><!-- /.trusted-company__list-->
+                    </div><!-- /.col-md-6-->
+                  </div>
+                </div><!-- /.trusted-company__content -->
+              </div><!-- /.col-lg-6 -->
+              <div class="col-lg-6">
+                <div class="trusted-company__box-wrap">
+                  <div class="trusted-company__box">
+                    <span>1</span>
+                    <p>Comprehensive maintenance solutions for all industrial needs</p>
+                  </div><!-- /.trusted-company__box -->
+                  <div class="trusted-company__box">
+                    <span>2</span>
+                    <p>Quick response time for emergency repairs and support</p>
+                  </div><!-- /.trusted-company__box -->
+                  <div class="trusted-company__box">
+                    <span>3</span>
+                    <p>Expert consulting services to optimize your operations</p>
+                  </div><!-- /.trusted-company__box -->
+                  <div class="trusted-company__box">
+                    <span>4</span>
+                    <p>Customized maintenance plans tailored to your specific requirements</p>
+                  </div><!-- /.trusted-company__box -->
+                </div><!-- /.trusted-company__box-wrap -->
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </section><!-- /.trusted-company -->
+
+
+          
+
+        <section class="why-choose">
+            <!-- Background Shapes -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="why-choose__image">
+                            <p><i class="pylon-icon-verification"></i>Decades of Industry Experience</p>
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/why-choose-1-1.png" alt="" width="570" height="381">
+                        </div><!-- /.why-choose__image -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="why-choose__content">
+                            <div class="block-title text-left">
+                                <p>Our Advantages</p>
+                                <h2>Why Choose Us?</h2>
+                            </div><!-- /.block-title -->
+                            <p>Benefit from our extensive experience and dedicated team for all your industrial maintenance needs. We offer efficient solutions with a focus on reliability and quality.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="why-choose__box">
+                                        <h3><i class="fa fa-caret-right"></i>Expert Team</h3>
+                                        <p>Our professionals are highly skilled and experienced in industrial maintenance.</p>
+                                    </div><!-- /.why-choose__box -->
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6">
+                                    <div class="why-choose__box">
+                                        <h3><i class="fa fa-caret-right"></i>Efficient Solutions</h3>
+                                        <p>We provide tailored solutions to meet your specific maintenance requirements.</p>
+                                    </div><!-- /.why-choose__box -->
+                                </div><!-- /.col-md-6 -->
+                            </div><!-- /.row -->
+                            <!-- Progress Bars Removed -->
+                        </div><!-- /.why-choose__content -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.why-choose -->
+        
+        <section class="trusted-company">
+            <div class="trusted-company__bg" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/shapes/trust-bg-1-1.png);"></div><!-- /.trusted-company__bg -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text-center">
+                        <a style="color: white; font-size: 24px; white-space: nowrap; display: block;">Operating Across 24 Tunisian Regions | 56 Staff Members | Trusted by 100+ Clients</a>
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.trusted-company -->
+        
+        
+
+              
+
+
+        <div class="client-carousel pt-50 pb-50 custom">
+            <div class="container">
+                <div class="thm-swiper__slider swiper-container custom" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                "0": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "375": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 2
+                },
+                "575": {
+                    "spaceBetween": 30,
+                    "slidesPerView": 3
+                },
+                "767": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 4
+                },
+                "991": {
+                    "spaceBetween": 50,
+                    "slidesPerView": 5
+                },
+                "1199": {
+                    "spaceBetween": 100,
+                    "slidesPerView": 5
+                }
+            }}'>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-2.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-1.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-2.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-1.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-2.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-1.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-2.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-1.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-2.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <div class="swiper-slide custom">
+                            <img src="/assets/nano/webdevcode.com/html/pylon1/assets/images/resources/brand-1-1.png" alt="" class="custom">
+                        </div><!-- /.swiper-slide -->
+                        <!-- Add other slides here -->
+                    </div><!-- /.swiper-wrapper -->
+                </div><!-- /.thm-swiper__slider -->
+            </div><!-- /.container -->
+        </div><!-- /.client-carousel -->
+        

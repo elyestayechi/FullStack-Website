@@ -1,0 +1,81 @@
+
+<div class="page-wrapper footer-space">
+
+    <section class="trusted-company">
+        <div class="trusted-company__bg" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/shapes/trust-bg-1-1.png);"></div>
+        <div class="trusted-company__content">
+            <div class="block-title text-left">
+                <p>Home / Sign In</p>
+                <h2>Sign In</h2>
+            </div><!-- /.block-title -->
+        </div>
+    </section>
+
+    <section class="signin-section">
+        <div class="container">
+            <div class="signin-form">
+                <h2>Sign In</h2>
+                <p>Enter your email address and password to access GMI platform.</p>
+                <form (ngSubmit)="login()">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </div>
+                    <div class="signup-link">
+                        <p>Don't have an account? <a routerLink="/sign-up">Sign Up</a></p>
+                    </div>
+                </form>
+                <div id="login-error-message" class="hidden" style="color: red;"></div>
+            </div>
+        </div><!-- /.container -->
+    </section><!-- /.signin-section -->
+
+</div><!-- /.page-wrapper -->
+
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/jquery.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/swiper.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/jquery.validate.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/bootstrap-select.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/wow.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/odometer.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/jquery.appear.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/jarallax.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/circle-progress.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/wNumb.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/nouislider.min.js"></script>
+<script src="/assets/nano/webdevcode.com/html/pylon1/assets/js/theme.js"></script>
+
+<style>
+    .signin-form {
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .signin-form h2 {
+        margin-bottom: 20px;
+    }
+    .signin-form .form-group {
+        margin-bottom: 15px;
+    }
+    .signin-form .btn {
+        width: 100%;
+    }
+    .footer-space {
+        margin-bottom: 100px; /* Adjust this value to create enough space for the footer */
+    }
+    .hidden {
+        display: none;
+    }
+</style>

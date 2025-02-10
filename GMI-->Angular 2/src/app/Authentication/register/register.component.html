@@ -1,0 +1,91 @@
+<div class="page-wrapper footer-space">
+    <section class="trusted-company">
+      <div class="trusted-company__bg" style="background-image: url(/assets/nano/webdevcode.com/html/pylon1/assets/images/shapes/trust-bg-1-1.png);"></div>
+      <div class="trusted-company__content">
+        <div class="block-title text-left">
+          <p>Home / Register</p>
+          <h2>Register</h2>
+        </div>
+      </div>
+    </section>
+  
+    <section class="signup-section">
+      <div class="container">
+        <div class="signup-form">
+          <h2>Register</h2>
+          <p>Create your account to access the GMI platform.</p>
+          <form (ngSubmit)="register()" #registerForm="ngForm">
+            <div class="form-group">
+              <label for="nomUser">First Name</label>
+              <input type="text" class="form-control" id="prenomUser" name="prenomUser" [(ngModel)]="prenomUser" required>
+            </div><div class="form-group">
+                <label for="nomUser">Last Name</label>
+                <input type="text" class="form-control" id="nomUser" name="nomUser" [(ngModel)]="nomUser" required>
+              </div>
+              <div class="form-group">
+                <label for="numUser">Number</label>
+                <input type="text" class="form-control" id="numUser" name="numUser" [(ngModel)]="numUser" required pattern="^\+216\d{8}$">
+                <div *ngIf="registerForm.controls['numUser'].errors?.['required']">Number is required.</div>
+                <div *ngIf="registerForm.controls['numUser'].errors?.['pattern']">Invalid number format. Please use +216 followed by 8 digits.</div>
+              </div>
+              <div class="form-group">
+                <label for="adresseUser">Address</label>
+                <input type="text" class="form-control" id="adresseUser" name="adresseUser" [(ngModel)]="adresseUser" required>
+              </div>
+            <div class="form-group">
+              <label for="emailUser">Email</label>
+              <input type="email" class="form-control" id="emailUser" name="emailUser" [(ngModel)]="emailUser" required email>
+              <div *ngIf="registerForm.controls['emailUser'].errors?.['required']">Email is required.</div>
+              <div *ngIf="registerForm.controls['emailUser'].errors?.['email']">Invalid email format.</div>
+            </div>
+            <div class="form-group">
+              <label for="mdpUser">Password</label>
+              <input type="password" class="form-control" id="mdpUser" name="mdpUser" [(ngModel)]="mdpUser" required minlength="8" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,16}$">
+              <div *ngIf="registerForm.controls['mdpUser'].errors?.['required']">Password is required.</div>
+              <div *ngIf="registerForm.controls['mdpUser'].errors?.['minlength']">Password must be at least 8 characters long.</div>
+              <div *ngIf="registerForm.controls['mdpUser'].errors?.['maxlength']">Password must be at most 16 characters long.</div>
+              <div *ngIf="registerForm.controls['mdpUser'].errors?.['pattern']">Password must contain at least one uppercase letter, one lowercase letter, and one digit.</div>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+              <div *ngIf="registerForm.controls['confirmPassword'].errors?.['required']">Confirm Password is required.</div>
+              <div *ngIf="!passwordsMatch">Passwords do not match.</div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+          </form>
+          <!-- Error message display -->
+          <div id="registration-error-message" class="hidden" style="color: red;"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <style>
+    .signup-form {
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .signup-form h2 {
+        margin-bottom: 20px;
+    }
+    .signup-form .form-group {
+        margin-bottom: 15px;
+    }
+    .signup-form .btn {
+        width: 100%;
+    }
+    .footer-space {
+        margin-bottom: 100px; /* Adjust this value to create enough space for the footer */
+    }
+    .hidden {
+        display: none;
+    }
+  </style>
+  

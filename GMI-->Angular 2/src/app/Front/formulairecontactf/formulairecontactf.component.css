@@ -1,0 +1,21 @@
+.trusted-company__content {
+    position: relative;
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .block-title {
+    margin-bottom: 10px;
+    margin-left: 10%; /* Move content quarter of the page to the right */
+    width: 75%; /* Adjust the width of the content */
+  }
+  
+  .block-title p {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .block-title h2 {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+  }
+  
